@@ -29,8 +29,9 @@ jobs:
           entryPoint: 'sonar-scanner'
           args: |
             -Dsonar.organization=thedevfactory-ai
-            -Dsonar.projectKey=fea7157a-3406-4d91-ae2b-1fa13af63f44_80821_yfprime_marcus1
+            -Dsonar.projectKey=fea7157a-3406-4d91-ae2b-1fa13af63f44_09103_yfprime_marcus1
             -Dsonar.sources=.
+            -Dsonar.branch.name=main
         env:
           SONAR_TOKEN: a832ec3c175662f182472ee49598e559289aecb6
     
