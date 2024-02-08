@@ -1,0 +1,23 @@
+
+name: Webhook on Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send-webhook:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Send Webhook
+      run: |
+        curl -X POST -H "Content-Type: application/json"         -d '{"repository": "marcus1", "url": "localhost:8080"}'         localhost:8080
+      env:
+        REPO_NAME: ${ github.repository }
+
+    
